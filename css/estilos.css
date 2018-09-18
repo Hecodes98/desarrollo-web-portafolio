@@ -33,7 +33,7 @@ body {
   margin: 0;
 }
 
-h1, 
+h1,
 h2,
 h3,
 h4,
@@ -108,11 +108,12 @@ h2 {
   /* margin: 10px; */
   margin-bottom: 15px;
   /* margin-right
-  margin-left 
+  margin-left
   margin-top */
   padding: 20px;
   background: white;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -147,9 +148,10 @@ h2 {
 }
 
 .header {
-  background-color: #1b2127;
+  background-color: #1d252c;
   color: white;
   display: flex;
+  flex-wrap: wrap;
   height: 70px;
   align-items: center;
   justify-content: space-between;
@@ -226,7 +228,7 @@ figure {
 .event-list-title {
   margin-left: 20px;
 }
-.event { 
+.event {
   margin: 10px;
   width: 480px;
   flex-shrink: 0;
@@ -264,6 +266,7 @@ figure {
   color: white;
   height: 150px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -315,17 +318,60 @@ figure {
   margin-top: 10px;
 }
 
-.form-email h3 { 
+.form-email h3 {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 .container {
   /* border: 1px solid red; */
-  width: 1000px;
+  max-width: 1000px;
+  flex: 1;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
   height: inherit;
   flex-wrap: inherit;
+}
+
+/* Para hacer los MQ desktop first, empezamos desde el MQ mayor */
+
+@media screen and (max-width: 1024px) {
+
+}
+
+
+@media screen and (max-width: 767px) {
+  .header{
+    display: block;
+    height: auto;
+  }
+  .header ol{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header ol li{
+    padding: 10px 0;
+
+  }
+  .header ol li:nth-child(3n+0){
+    margin-bottom: 10px;
+  }
+
+  .logo{
+    text-align: center;
+    padding-top: 15px
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+}
+
+
+@media screen and (max-width: 320px) {
+
 }
