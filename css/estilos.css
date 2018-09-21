@@ -110,7 +110,7 @@ h2 {
   position: fixed;
   left: 10px;
   top: 10px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .hero {
@@ -448,12 +448,33 @@ figure {
   .header ol{
     flex-direction: column;
     align-items: center;
-    display: none;
+    height: auto;
+    /* display: none; */
   }
+
+  .menu{
+    position: fixed;
+    background-color: rgba(5, 111, 255, 0.8);
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    transition: .3s;
+  }
+
+  .menu.is-active{
+    left: 0;
+  }
+
 
   .header ol li{
     padding: 10px 0;
-
+    height: initial
   }
   .header ol li:nth-child(3n+0){
     margin-bottom: 10px;
