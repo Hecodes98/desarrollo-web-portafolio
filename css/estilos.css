@@ -28,6 +28,10 @@ valores */
 /* background gris = #1b2127 */
 /* celeste = #026fff */
 
+.portfolio, .event-list {
+	border-left: 10px solid #026fff;
+}
+
 @font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon.eot?tclj80');
